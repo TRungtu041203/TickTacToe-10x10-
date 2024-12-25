@@ -1,0 +1,7 @@
+chien 12 4 9
+thanh 3 4 6
+vinh 5 6 3
+thuan 13 0 0
+trung 15 4 3
+tung 3 1 0
+buoi 1 0 0
