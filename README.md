@@ -2,7 +2,12 @@
 
 ## Overview
 This project is a **Tic Tac Toe** game featuring a human player against an intelligent bot powered by the **Minimax Algorithm** with various optimizations for enhanced performance. It offers multiple difficulty levels, replay functionality, and detailed player statistics.
+
+---
+## Menu Screenshot
 ![Menu](Menu_Game.png)
+---
+## Gameplay Screenshot
 ![Gameplay](Board.png)
 
 ---
