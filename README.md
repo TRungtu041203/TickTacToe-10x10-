@@ -36,37 +36,19 @@ This project is a **Tic Tac Toe** game featuring a human player against an intel
 ---
 
 ## Bot Logic
-
 ### **Minimax Algorithm**
 - The AI evaluates all possible moves to determine the best strategy.
 - **Player ("X")**: Maximizes their score.
 - **Bot ("O")**: Minimizes the opponent's score.
+- **Game Tree:** The algorithm builds a tree representing all possible moves from the current game state.
+  - Nodes: Represent the game states after a move.
+  - Edges: Represent the moves taken between states.
+- **Depth:** Each level of the tree represents a turn in the game.
+  - Odd Depths: Maximizer’s turn.
+  - Even Depths: Minimizer’s turn.
+- **Evaluation Function:** Scores a game state to determine its favorability for the Maximizer
+- **Backtracking**: The algorithm calculates scores for each possible move recursively, propagating them back up the tree to determine the best move.
 
-#### How It Works:
-1. Simulates all possible moves for both the bot and the player.
-2. Scores each move based on game outcomes:
-   - **Win**: +10 points.
-   - **Loss**: -10 points.
-   - **Draw**: 0 points.
-3. Chooses the move with the highest likelihood of leading to a win or preventing a loss.
-
-### **Alpha-Beta Pruning**
-- Optimizes the Minimax Algorithm by skipping branches of the game tree that won't influence the outcome.
-- Significantly reduces the number of states the bot evaluates, improving speed.
-
-### **Move Prioritization**
-- The bot prioritizes moves:
-  - Blocking imminent wins for the player.
-  - Extending its own sequences of symbols.
-
-### **Dynamic Depth Adjustment**
-- In early game stages, evaluates fewer moves to save time.
-- In late game stages, evaluates deeper moves for accuracy.
-
-### **Transposition Table**
-- Caches previously evaluated board states to avoid redundant calculations.
-
----
 
 ## Optimizations
 
@@ -81,7 +63,7 @@ This project is a **Tic Tac Toe** game featuring a human player against an intel
 ### 3. **Move Prioritization**
 - Focuses on the most critical moves first (e.g., blocking wins), ensuring effective gameplay under time constraints.
 
-### 4. **Dynamic Depth Reduction**
+### 4. **Dynamic Depth Reduction (Interactive Deepening)**
 - Early-game: Analyzes 2–3 moves ahead.
 - Late-game: Analyzes up to 5–6 moves ahead for precise endgame strategies.
 
@@ -100,9 +82,7 @@ This project is a **Tic Tac Toe** game featuring a human player against an intel
    - Align five symbols (X or O) consecutively in any direction.
 5. **Replay**:
    - Save or rewatch previous games.
-
 ---
-
 ## System Requirements
 
 - **Compiler**: C++17 or later.
