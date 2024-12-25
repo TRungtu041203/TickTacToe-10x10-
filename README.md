@@ -18,6 +18,7 @@ This project is a **Tic Tac Toe** game featuring a human player against an intel
 
 ### 3. **Player Statistics**
 - Tracks wins, losses, and draws for each player.
+- Load players history to players.txt
 - Suggests potential matches based on player level for balanced gameplay.
 
 ### 4. **Replay System**
